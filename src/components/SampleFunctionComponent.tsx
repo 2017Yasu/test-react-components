@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import FunctionCountComponent from './FunctionCountComponent';
+import FunctionMemoCountComponent from './FunctionMemoCountComponent';
 
 export default function SampleFunctionComponent() {
     console.log('SampleFunctionComponent');
@@ -26,7 +26,7 @@ export default function SampleFunctionComponent() {
             </div>
             <div>
                 <button onClick={countUp}>count up</button>
-                <FunctionCountComponent
+                <FunctionMemoCountComponent
                     count={count}
                 />
             </div>
