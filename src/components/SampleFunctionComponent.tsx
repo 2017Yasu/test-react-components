@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
-import FunctionMemoCountComponent from './FunctionMemoCountComponent';
+import FunctionCallbackHookCountComponent from './FunctionCallbackHookCountComponent';
 
 export default function SampleFunctionComponent() {
     console.log('SampleFunctionComponent');
@@ -14,6 +14,8 @@ export default function SampleFunctionComponent() {
         setText(e.target.value);
     };
 
+    const changeTextCallback = useCallback(changeText, [setText]);
+
     const countUp: React.MouseEventHandler = () => {
         setCount(count + 1);
     };
@@ -22,12 +24,12 @@ export default function SampleFunctionComponent() {
         <>
             <div>
                 <p>SampleFunctionComponent</p>
-                <input type="text" onChange={changeText} />
             </div>
             <div>
                 <button onClick={countUp}>count up</button>
-                <FunctionMemoCountComponent
+                <FunctionCallbackHookCountComponent
                     count={count}
+                    changeText={changeTextCallback}
                 />
             </div>
         </>
