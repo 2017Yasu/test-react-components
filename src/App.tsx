@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SampleFunctionComponent from './components/SampleFunctionComponent';
 
 import './App.css';
