@@ -12,7 +12,8 @@
   "rules": {
     "react/prop-types": "off",
     "@typescript-eslint/no-empty-interface": 0,
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "semi": "error"
   },
   "settings": {
     "react": {
