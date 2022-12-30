@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import FunctionCountComponent from "./FunctionCountComponent";
+import FunctionCountComponent from './FunctionCountComponent';
 
 export default function SampleFunctionComponent() {
-    console.log("SampleFunctionComponent");
-    const [text, setText] = useState("");
+    console.log('SampleFunctionComponent');
+    const [text, setText] = useState('');
     const [count, setCount] = useState(0);
 
     const changeText: React.ChangeEventHandler = (e) => {
