@@ -13,7 +13,8 @@
     "react/prop-types": "off",
     "@typescript-eslint/no-empty-interface": 0,
     "indent": ["error", 4],
-    "semi": "error"
+    "semi": "error",
+    "quotes": ["error", "single"]
   },
   "settings": {
     "react": {
