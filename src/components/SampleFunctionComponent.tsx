@@ -20,12 +20,16 @@ export default function SampleFunctionComponent() {
 
     return (
         <>
-            <p>SampleFunctionComponent</p>
-            <input type="text" onChange={changeText} />
-            <button onClick={countUp}>count up</button>
-            <FunctionCountComponent
-                count={count}
-            />
+            <div>
+                <p>SampleFunctionComponent</p>
+                <input type="text" onChange={changeText} />
+            </div>
+            <div>
+                <button onClick={countUp}>count up</button>
+                <FunctionCountComponent
+                    count={count}
+                />
+            </div>
         </>
     );
 }
