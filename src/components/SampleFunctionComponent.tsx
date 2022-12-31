@@ -2,9 +2,9 @@ import React, { useState, useCallback } from 'react';
 
 import FunctionCallbackHookCountComponent from './FunctionCallbackHookCountComponent';
 
-export default function SampleFunctionComponent() {
+export default function SampleFunctionComponent(): JSX.Element {
     console.log('SampleFunctionComponent');
-    const [text, setText] = useState('');
+    const [, setText] = useState('');
     const [count, setCount] = useState(0);
 
     const changeText: React.ChangeEventHandler = (e) => {
