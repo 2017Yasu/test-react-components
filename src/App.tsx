@@ -1,4 +1,4 @@
-import SampleFunctionComponent from './components/SampleFunctionComponent';
+import SampleFunctionComponent from './components/sample-function-component/SampleFunctionComponent';
 
 import './App.css';
 
