@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react';
 
 import FunctionCallbackHookCountComponent from './FunctionCallbackHookCountComponent';
 
-export default function SampleFunctionComponent(): JSX.Element {
-    console.log('SampleFunctionComponent');
+export default function FunctionCallbackComponent(): JSX.Element {
+    console.log('FunctionCallbackComponent');
     const [, setText] = useState('');
     const [count, setCount] = useState(0);
 
@@ -23,10 +23,12 @@ export default function SampleFunctionComponent(): JSX.Element {
     return (
         <>
             <div>
-                <p>SampleFunctionComponent</p>
+                <p>FunctionCallbackComponent</p>
             </div>
             <div>
                 <button onClick={countUp}>count up</button>
+            </div>
+            <div>
                 <FunctionCallbackHookCountComponent
                     count={count}
                     changeText={changeTextCallback}
