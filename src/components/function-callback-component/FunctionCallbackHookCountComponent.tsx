@@ -8,7 +8,6 @@ type Props = {
 
 const FunctionCountComponent = (props: Props): JSX.Element => {
     const { count, changeText } = props;
-    console.log('FunctionCallbackHookCountComponent');
 
     return (
         <>
@@ -20,6 +19,8 @@ const FunctionCountComponent = (props: Props): JSX.Element => {
 };
 
 const FunctionCallbackHookCountComponent = memo(function FunctionCallbackHookCountComponent(props: Props): JSX.Element {
+    console.log('FunctionCallbackHookCountComponent');
+
     return (
         <FunctionCountComponent
             {...props}

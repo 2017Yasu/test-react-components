@@ -6,7 +6,6 @@ type Props = {
 
 const FunctionCountComponent = (props: Props): JSX.Element => {
     const { count } = props;
-    console.log('FunctionMemoCountComponent');
 
     return (
         <>
@@ -17,6 +16,8 @@ const FunctionCountComponent = (props: Props): JSX.Element => {
 };
 
 const FunctionMemoCountComponent = memo(function FunctionMemoCountComponent(props: Props): JSX.Element {
+    console.log('FunctionMemoCountComponent');
+
     return (
         <FunctionCountComponent
             {...props}
