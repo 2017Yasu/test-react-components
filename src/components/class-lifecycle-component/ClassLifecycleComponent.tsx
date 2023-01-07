@@ -61,12 +61,24 @@ export default class ClassLifecycleComponent extends React.Component<Props, Stat
         clearInterval(this.timer);
     }
 
+    clear(): void {
+        this.setState((prevState: State) => {
+            return {
+                ...prevState,
+                seconds: 0,
+            };
+        });
+    }
+
     render(): JSX.Element {
         return (
             <div>
                 <h2>{this.props.title}</h2>
                 <h3>It is {this.state.date.toLocaleTimeString()}.</h3>
-                <h3>{this.state.seconds}s passed since first rendered.</h3>
+                <div>{this.state.seconds}s</div>
+                <button onClick={() => this.clear()}>
+                    Reset Seconds
+                </button>
             </div>
         );
     }
