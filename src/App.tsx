@@ -1,3 +1,4 @@
+import CompositionComponent from './components/composition-component';
 import SampleFunctionComponent from './components/sample-function-component';
 import FunctionMemoComponent from './components/function-memo-component';
 import FunctionCallbackComponent from './components/function-callback-component';
@@ -7,17 +8,39 @@ import LiftingStateUpComponent from './components/lifting-state-up-component';
 import './App.scss';
 
 function App(): JSX.Element {
+    const defaultBorderColor = '#92DBFF';
     return (
         <div className="App">
-            <SampleFunctionComponent />
-            <hr style={{ width: '100%' }} />
-            <FunctionMemoComponent />
-            <hr style={{ width: '100%' }} />
-            <FunctionCallbackComponent />
-            <hr style={{ width: '100%' }} />
-            <Clock />
-            <hr style={{ width: '100%' }} />
-            <LiftingStateUpComponent />
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='SampleFunctionComponent'
+            >
+                <SampleFunctionComponent />
+            </CompositionComponent>
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='FunctionMemoComponent'
+            >
+                <FunctionMemoComponent />
+            </CompositionComponent>
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='FunctionCallbackComponent'
+            >
+                <FunctionCallbackComponent />
+            </CompositionComponent>
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='Clock'
+            >
+                <Clock />
+            </CompositionComponent>
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='LiftingStateUpComponent'
+            >
+                <LiftingStateUpComponent />
+            </CompositionComponent>
         </div>
     );
 }
