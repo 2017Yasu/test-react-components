@@ -4,7 +4,7 @@ import FunctionCallbackComponent from './components/function-callback-component'
 import Clock from './components/class-lifecycle-component';
 import LiftingStateUpComponent from './components/lifting-state-up-component';
 
-import './App.css';
+import './App.scss';
 
 function App(): JSX.Element {
     return (
