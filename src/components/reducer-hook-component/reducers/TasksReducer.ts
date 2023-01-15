@@ -12,7 +12,7 @@ export const TasksActionTypes = {
     DELETED: 'deleted',
 };
 
-export function tasksReducer(tasks: Task[], action: ActionType) {
+export function tasksReducer(tasks: Task[], action: ActionType): Task[] {
     switch (action.type) {
     case TasksActionTypes.ADDED: {
         const newTask: Task = {
