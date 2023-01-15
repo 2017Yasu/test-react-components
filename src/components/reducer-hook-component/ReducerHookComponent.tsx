@@ -1,38 +1,38 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
+
+import { TasksActionTypes, tasksReducer } from './reducers/TasksReducer';
+import { Task } from './types/Task';
 import AddTask from './AddTask';
 import TaskList from './TaskList';
-import { Task } from './types/Task';
 
 import './ReducerHookComponent.scss';
 
 export default function ReducerHookComponent(): JSX.Element {
-    const [tasks, setTasks] = useState(initialTasks);
+    const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
 
     function handleAddTask(text: string) {
-        setTasks([
-            ...tasks,
-            {
-                id: nextId++,
-                text: text,
-                done: false,
-            },
-        ]);
+        const newTask = {
+            id: nextId++,
+            text: text,
+        };
+        dispatch({
+            type: TasksActionTypes.ADDED,
+            data: newTask,
+        });
     }
 
     function handleChangeTask(task: Task) {
-        setTasks(
-            tasks.map((t) => {
-                if (t.id === task.id) {
-                    return task;
-                } else {
-                    return t;
-                }
-            })
-        );
+        dispatch({
+            type: TasksActionTypes.CHANGED,
+            data: task,
+        });
     }
 
     function handleDeleteTask(taskId: number) {
-        setTasks(tasks.filter((t) => t.id !== taskId));
+        dispatch({
+            type: TasksActionTypes.DELETED,
+            data: { id: taskId },
+        });
     }
 
     return (
