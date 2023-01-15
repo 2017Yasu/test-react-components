@@ -7,6 +7,7 @@ import LiftingStateUpComponent from './components/lifting-state-up-component';
 import SuspenseComponent from './components/suspense-component';
 
 import './App.scss';
+import ReducerHookComponent from './components/reducer-hook-component';
 
 function App(): JSX.Element {
     const defaultBorderColor = '#92DBFF';
@@ -47,6 +48,12 @@ function App(): JSX.Element {
                 title='SuspenseComponent'
             >
                 <SuspenseComponent />
+            </CompositionComponent>
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='ReducerHookComponent'
+            >
+                <ReducerHookComponent />
             </CompositionComponent>
         </div>
     );

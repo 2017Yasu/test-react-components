@@ -1,0 +1,27 @@
+.taskList {
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+
+    li {
+        width: 100%;
+    }
+
+    .task__container {
+        display: flex;
+        width: 100%;
+
+        .task__name {
+            margin: 2px;
+            margin-right: auto;
+        }
+
+        button {
+            margin: 2px;
+
+            &.btn-del {
+                margin-right: 0px;
+            }
+        }
+    }
+}
