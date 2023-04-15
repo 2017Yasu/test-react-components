@@ -5,14 +5,15 @@ import FunctionCallbackComponent from './components/function-callback-component'
 import Clock from './components/class-lifecycle-component';
 import LiftingStateUpComponent from './components/lifting-state-up-component';
 import SuspenseComponent from './components/suspense-component';
+import ReducerHookComponent from './components/reducer-hook-component';
+import InfiniteScroller from './components/infinite-scroller';
 
 import './App.scss';
-import ReducerHookComponent from './components/reducer-hook-component';
 
 function App(): JSX.Element {
     const defaultBorderColor = '#92DBFF';
     return (
-        <div className="App">
+        <div className='App'>
             <CompositionComponent
                 color={defaultBorderColor}
                 title='SampleFunctionComponent'
@@ -31,10 +32,7 @@ function App(): JSX.Element {
             >
                 <FunctionCallbackComponent />
             </CompositionComponent>
-            <CompositionComponent
-                color={defaultBorderColor}
-                title='Clock'
-            >
+            <CompositionComponent color={defaultBorderColor} title='Clock'>
                 <Clock />
             </CompositionComponent>
             <CompositionComponent
@@ -54,6 +52,12 @@ function App(): JSX.Element {
                 title='ReducerHookComponent'
             >
                 <ReducerHookComponent />
+            </CompositionComponent>
+            <CompositionComponent
+                color={defaultBorderColor}
+                title='InfiniteScroller'
+            >
+                <InfiniteScroller />
             </CompositionComponent>
         </div>
     );
